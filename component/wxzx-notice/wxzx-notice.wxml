@@ -1,0 +1,10 @@
+<view class="notice" hidden='{{notice_hidden}}' bindtap='noticeClick' style="background-color: {{backgroundColor}}; color: {{color}};">  
+  <view class='notice_content'>
+    <image wx:if="{{showIcon}}" src='{{src}}'></image>
+    <view id="notice_text" class="{{notice_class}}">
+      <view class='notice_text1' style='left: {{left1}}px;'>{{text}}</view>
+      <view wx:if="{{isJoin && isScroll}}" style='left: {{left2}}px;' class='notice_text2'>{{text}}</view>
+    </view>
+    <view catchtap='close' wx:if="{{showClose}}" style="color: {{color}};" class='close'></view>
+  </view>
+</view>

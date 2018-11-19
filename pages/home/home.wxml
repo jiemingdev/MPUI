@@ -1,0 +1,23 @@
+<wxzx-navbar nav-title="组件" is-tabbar="true"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px'>
+    <view class='header'>
+      <image src='../../img/mpui.png'></image>
+      <text>自定义小程序组件，仅供参考</text>
+    </view>
+    <view class="list_bg">
+      <view class='section' wx:for="{{list}}" wx:key="key" wx:for-item="section" wx:for-index="sectionIndex">
+        <view class='section_title'>{{section.title}}</view>
+        <view class='row' wx:for="{{list[sectionIndex].rows}}"  wx:key="key" wx:for-item="row" wx:for-index="rowIndex" bindtap='rowClick' data-sectionIndex="{{sectionIndex}}" data-rowIndex="{{rowIndex}}">
+          <view class='row_title'>{{row.title}}</view>
+          <view class='right_arrow'></view>
+        </view>
+      </view>
+    </view>
+    <view class='bottom_view'>
+      <image src='../../img/github.png'></image>
+      <text>https://github.com/mpui/mpui</text>
+    </view>
+  </view>
+</view>
+

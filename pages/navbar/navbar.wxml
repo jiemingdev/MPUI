@@ -1,0 +1,23 @@
+<wxzx-navbar nav-title-font-size="{{navFontSize}}" nav-title-color="{{navColor}}" nav-background-color="{{navBackColor}}" nav-back-button-color="{{navBtnColor}}" nav-title="{{navTitle}}"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px;'>
+    <scroll-view scroll-y style='height: {{bodyHeight}}px;'>
+      <view class='section_view' wx:for="{{sections}}" wx:key="key">
+        <view class='top_view'>
+          <button class='btn' bindtap='changeNav' data-type='{{item.type}}'>{{item.title}}</button>
+          <view class='tips_view'>
+            <view class='line_view'></view>
+            <view class='tips'>{{item.tips}}</view>
+          </view>
+          <view class='memo_view'>
+            <view class='memo'>{{item.memo}}</view>
+            <view class='code_btn' bindtap='showCode' data-index="{{index}}">{{item.isShow ? 'Hide Code' : 'Show Code'}}</view>
+          </view> 
+        </view>
+        <view class='bottom_view' bindtap='copyCode' data-index="{{index}}" hidden='{{!item.isShow}}'>
+          <view class='code_view'>{{item.code}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

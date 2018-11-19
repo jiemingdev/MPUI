@@ -1,0 +1,84 @@
+.notice {
+  width: 100%;
+  height: 60rpx;
+}
+
+.notice_content {
+  width: 100%;
+  height: 60rpx;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.icon_class {
+  left: 70rpx;
+  width: calc(100% - 100rpx);
+  height: 60rpx;
+  overflow: hidden;
+  line-height: 60rpx;
+  position: absolute;
+}
+
+.close_class {
+  left: 30rpx;
+  width: calc(100% - 100rpx);
+  height: 60rpx;
+  overflow: hidden;
+  line-height: 60rpx;
+  position: absolute;
+}
+
+.icon_close_class {
+  left: 70rpx;
+  width: calc(100% - 140rpx);
+  height: 60rpx;
+  overflow: hidden;
+  line-height: 60rpx;
+  position: absolute;
+}
+
+.normal_class {
+  left: 30rpx;
+  width: calc(100% - 60rpx);
+  height: 60rpx;
+  overflow: hidden;
+  line-height: 60rpx;
+  position: absolute;
+}
+
+.notice_text1 {
+  white-space: nowrap;
+  position: absolute;
+}
+
+.notice_text2 {
+  white-space: nowrap;
+  position: absolute;
+}
+
+.notice_content image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+  left: 30rpx;
+  position: absolute;
+}
+
+.close {
+  line-height: 60rpx;
+  text-align: right;
+  height: 60rpx;
+  width: 40rpx;
+  font-size: 40rpx;
+  right: 30rpx;
+  position: absolute;
+  top: -4rpx;
+}
+
+.close::before {
+  content: "\00D7";
+}

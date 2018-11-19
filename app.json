@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/about/about",
+    "pages/music/music",
+    "pages/navbar/navbar",
+    "pages/popup/popup",
+    "pages/progress/progress",
+    "pages/slider/slider",
+    "pages/elip/elip",
+    "pages/notice/notice"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "selectedColor": "#d4237a",
+    "color": "#707070",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "组件",
+        "iconPath": "img/tab-component.png",
+        "selectedIconPath": "img/tab-component-active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "img/tab-about.png",
+        "selectedIconPath": "img/tab-about-active.png"
+      }
+    ]
+  }
+}

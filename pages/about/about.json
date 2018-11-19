@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wxzx-navbar": "../../component/wxzx-navbar/wxzx-navbar"
+  }
+}

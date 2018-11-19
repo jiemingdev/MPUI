@@ -1,0 +1,12 @@
+<view class="music">
+    <!-- 总数为偶数 第一条是长的 -->
+  <view class='' wx:for="{{lineCount}}" wx:key="key" wx:for-index="index" data-index="{{index}}">
+    <block wx:if="{{lineCount % 2 == 0}}">
+      <view class="submusic {{index % 2 == 0 ? 'long' : 'short'}}" style="animation: .8s .1s linear infinite backwards normal {{liveState}}; animation-delay: {{index * 0.2 + 0.1}}s; width: {{lineWidth}}rpx; background-color: {{lineColor}}; height: {{index % 2 == 0 ? lineHeight : lineHeight / 2}}rpx;"></view>
+    </block>
+    <!-- 总数为奇数 第一条是短的 -->
+    <block wx:if="{{lineCount % 2 == 1}}">
+      <view class="submusic {{index % 2 == 1 ? 'long' : 'short'}}" style="animation: .8s .1s linear infinite backwards normal {{liveState}}; animation-delay: {{index * 0.2 + 0.1}}s; width: {{lineWidth}}rpx; background-color: {{lineColor}}; height: {{index % 2 == 1 ? lineHeight : lineHeight / 2}}rpx;"></view>
+    </block>
+  </view>
+</view>

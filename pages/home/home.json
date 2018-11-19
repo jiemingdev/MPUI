@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wxzx-navbar": "../../component/wxzx-navbar/wxzx-navbar",
+    "wxzx-notice": "../../component/wxzx-notice/wxzx-notice"
+  }
+}

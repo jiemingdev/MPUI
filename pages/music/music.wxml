@@ -1,0 +1,29 @@
+<wxzx-navbar nav-title="Music" is-tabbar="true"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px'>
+    <scroll-view scroll-y style='height: {{bodyHeight}}px;'>
+        <view class='section_view' wx:key="key" wx:for="{{sections}}" wx:for-index="index">
+          <view class='top_view'>
+            <view class='btns'>
+              <view class='music_bg' style="height: {{item.lineHeight}}rpx;">
+                <wxzx-music line-count="{{item.count}}" line-color="{{item.color}}" line-width="{{item.lineWidth}}" line-height="{{item.lineHeight}}" live-state="{{item.liveState}}"></wxzx-music>
+              </view>
+              <button class='btn' bindtap='change' data-type='start' data-index="{{index}}">开始</button>
+              <button class='btn' bindtap='change' data-type='pause' data-index="{{index}}">暂停</button>
+            </view>
+            <view class='tips_view'>
+              <view class='line_view'></view>
+              <view class='tips'>{{item.tips}}</view>
+            </view>
+            <view class='memo_view'>
+              <view class='memo'>{{item.memo}}</view>
+              <view class='code_btn' bindtap='showCode' data-index="{{index}}">{{item.isShow ? 'Hide Code' : 'Show Code'}}</view>
+            </view>
+          </view>
+          <view class='bottom_view' bindtap='copyCode' data-index="{{index}}" hidden='{{!item.isShow}}'>
+            <view class='code_view'>{{item.code}}</view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+</view>

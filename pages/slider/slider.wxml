@@ -1,0 +1,29 @@
+<wxzx-navbar nav-title="Slider" is-tabbar="true"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px'>
+    <scroll-view scroll-y style='height: {{bodyHeight}}px;'>
+      <view class='section_view' wx:for="{{sections}}" wx:key="key">
+        <view class='top_view'>
+          <view class='btns' style='height: {{index == sections.length - 1 ? 600 : 120}}rpx;'>
+            <view class='sub_view'>{{item.min}}</view>
+            <wxzx-slider percent="{{item.percent}}" width="{{item.width}}" stroke-width="{{item.strokeWidth}}" active-color="{{item.activeColor}}" background-color="{{item.backgroundColor}}" radius="{{item.radius}}" buffer-color="{{item.bufferColor}}" value="{{item.value}}" min="{{item.min}}" max="{{item.max}}" block-color="{{item.blockColor}}" is-custom="{{item.isCustom}}" block-size="{{item.blockSize}}" block-src="{{item.blockSrc}}" block-image-width="{{item.blockImageWidth}}" block-image-height="{{item.blockImageHeight}}" orientation="{{index == sections.length - 1 ? 'portrait' : 'landscape'}}">
+              <view class='block' wx:if="{{item.isCustom}}"></view>
+            </wxzx-slider>
+            <view class='sub_view'>{{item.max}}</view>
+          </view>
+          <view class='tips_view'>
+            <view class='line_view'></view>
+            <view class='tips'>{{item.tips}}</view>
+          </view>
+          <view class='memo_view'>
+            <view class='memo'>{{item.memo}}</view>
+            <view class='code_btn' bindtap='showCode' data-index="{{index}}">{{item.isShow ? 'Hide Code' : 'Show Code'}}</view>
+          </view> 
+        </view>    
+        <view class='bottom_view' data-index="{{index}}" bindtap='copyCode' hidden='{{!item.isShow}}'>
+          <view class='code_view'>{{item.code}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

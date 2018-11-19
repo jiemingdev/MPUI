@@ -1,0 +1,4 @@
+<view class="elip_view custom-class" style='-webkit-line-clamp: {{line}};'>
+  {{text}}
+  <slot></slot>
+</view>

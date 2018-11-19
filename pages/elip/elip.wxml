@@ -1,0 +1,30 @@
+<wxzx-navbar nav-title="Elip"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px'>
+    <scroll-view scroll-y style='height: {{bodyHeight}}px;'>
+        <view class='section_view' wx:key="key" wx:for="{{sections}}" wx:for-index="index">
+          <view class='top_view'>
+            <view class='text_view'>
+              <block wx:if="{{!item.showText}}">
+                <wxzx-elip custom-class="elip_view" line="{{item.line}}">这是一个需要截断的文本这是一个需要截断的文本这是一个需要截断的文本这是一个需要截断的文本这是一个需要截断的文本</wxzx-elip>
+              </block>
+              <block wx:if="{{item.showText}}">
+                <wxzx-elip custom-class="elip_view" text="这是一个需要截断的文本这是一个需要截断的文本这是一个需要截断的文本这是一个需要截断的文本这是一个需要截断的文本" line="{{item.line}}"></wxzx-elip>
+              </block>
+            </view>
+            <view class="tips_view">
+              <view class='line_view'></view>
+              <view class='tips'>{{item.tips}}</view>
+            </view>
+            <view class='memo_view'>
+              <view class='memo'>{{item.memo}}</view>
+              <view class='code_btn' bindtap='showCode' data-index="{{index}}">{{item.isShow ? 'Hide Code' : 'Show Code'}}</view>
+            </view>
+          </view>
+          <view class='bottom_view' bindtap='copyCode' data-index="{{index}}" hidden='{{!item.isShow}}'>
+            <view class='code_view'>{{item.code}}</view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+</view>

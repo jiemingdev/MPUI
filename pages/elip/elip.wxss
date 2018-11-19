@@ -1,0 +1,11 @@
+.page_body {
+  width: 100%;
+  position: absolute;
+  background-color: #efefef;
+}
+
+.elip_view {
+  color: #b0b0b0;
+  font-size: 26rpx;
+  width: 600rpx;
+}

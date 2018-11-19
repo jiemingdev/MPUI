@@ -1,0 +1,6 @@
+<view class="popup-mask {{popupShow ? 'popup-mask-show' : ''}}" style="z-index: {{zIndex}}; opacity: {{popupShow ? 1 : 0}}"></view>
+<view class="popup {{popupShow ? 'popup-show' : ''}}" bindtap="maskHide" style="top: {{popupStyle == 'top' ? top : (popupStyle == 'bottom' ? bottom : 0)}}px; left: {{popupStyle == 'left' ? left : (popupStyle == 'right' ? right : 0)}}px; transform: scale({{popupStyle == 'scale' ? scale : 1}}); z-index: {{zIndex + 1}}" catchtouchmove='true'>
+    <view class="content-{{contentAlignment}}" catchtap='true'>
+      <slot></slot>
+    </view>
+</view>

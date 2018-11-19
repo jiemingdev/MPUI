@@ -1,0 +1,25 @@
+<wxzx-navbar nav-title="Notice"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px;'>
+    <scroll-view scroll-y style='height: {{bodyHeight}}px;'>
+      <view class='section_view' wx:for="{{sections}}" wx:key="key">
+        <view class='top_view'>
+          <view class="notice_bg">
+          <wxzx-notice text="这是一个通告栏，这是一个通告栏，这是一个通告栏，这是一个通告栏" show-close="{{item.showClose}}" show-icon="{{item.showIcon}}" color="{{item.color}}" background-color="{{item.backgroundColor}}" src="{{item.src}}" bind:close="close" bind:noticeClick="noticeClick" is-scroll="{{item.isScroll}}" is-join="{{item.isJoin}}" speed="{{item.speed}}"></wxzx-notice>
+          </view>
+          <view class='tips_view'>
+            <view class='line_view'></view>
+            <view class='tips'>{{item.tips}}</view>
+          </view>
+          <view class='memo_view'>
+            <view class='memo'>{{item.memo}}</view>
+            <view class='code_btn' bindtap='showCode' data-index="{{index}}">{{item.isShow ? 'Hide Code' : 'Show Code'}}</view>
+          </view> 
+        </view>
+        <view class='bottom_view' bindtap='copyCode' data-index="{{index}}" hidden='{{!item.isShow}}'>
+          <view class='code_view'>{{item.code}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wxzx-navbar": "../../component/wxzx-navbar/wxzx-navbar",
+    "wxzx-elip": "../../component/wxzx-elip/wxzx-elip"
+  }
+}

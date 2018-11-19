@@ -1,0 +1,14 @@
+<wxzx-navbar nav-title="组件" is-tabbar="true"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px'>
+    <view class='header'>
+      <image src='../../img/mpui.png'></image>
+      <text>封装了几个组件，方便使用，仅供参考，后续也会在这里分享组件</text>
+    </view>
+    <view class='content'>
+      <view class='content_header'>○ 小程序展示</view>
+      <image src='../../img/ting.jpg' bindtap='showImage'></image>
+      <text>喜鹊有声</text>
+    </view>
+  </view>
+</view>

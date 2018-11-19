@@ -1,0 +1,6 @@
+.page_body {
+  width: 100%;
+  position: absolute;
+  background-color: #efefef;
+}
+

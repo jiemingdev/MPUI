@@ -1,0 +1,22 @@
+.page_body {
+  width: 100%;
+  position: absolute;
+  background-color: #efefef;
+}
+
+.popup_content {
+  background-color: #fff;
+  width: 750rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.close_btn {
+  width: 150rpx;
+  height: 80rpx;
+  background-color: #d4237a;
+  margin-left: 300rpx;
+  color: #fff;
+  margin-top: 100rpx;
+}

@@ -1,0 +1,9 @@
+<view class="nav" style="height: {{navbarHeight}}px; {{ activeLineColor[1] ? 'background-image: linear-gradient(to right, ' + activeLineColor[0] + ', ' + activeLineColor[1] + ');' : 'background-color:' + navBackgroundColor + ';'}}">
+  <view class="nav_back_btn" bindtap='backLastView' hidden='{{isHidden}}' style='margin-top: {{statusBarHeight}}px'>
+    <view class='left_arrows' style='border-color: {{navBackButtonColor}};'></view>
+  </view>
+  <view class='home_btn' bindtap='backHome' hidden='{{isHideHome}}' style='margin-top: {{statusBarHeight + 7}}px'>
+    <image src='../../img/home.png'></image>
+  </view>
+  <view class='nav_title_view' style="top: {{statusBarHeight}}px; font-size: {{navTitleFontSize}}px; color: {{navTitleColor}}">{{navTitle}}</view>
+</view>

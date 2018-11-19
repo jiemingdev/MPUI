@@ -1,0 +1,45 @@
+<wxzx-navbar nav-title="Popup" is-tabbar="true"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px'>
+    <scroll-view scroll-y style='height: {{bodyHeight}}px;'>
+        <view class='section_view' wx:for="{{sections}}" wx:key="key">
+          <view class='top_view'>
+            <button class='btn' bindtap='change' data-index='{{index}}'>显示</button>
+            <view class='tips_view'>
+              <view class='line_view'></view>
+              <view class='tips'>{{item.tips}}</view>
+            </view>
+            <view class='memo_view'>
+              <view class='memo'>{{item.memo}}</view>
+              <view class='code_btn' bindtap='showCode' data-index="{{index}}">{{item.isShow ? 'Hide Code' : 'Show Code'}}</view>
+            </view> 
+          </view> 
+          <view class='bottom_view' bindtap='copyCode' data-index="{{index}}" hidden='{{!item.isShow}}'>
+            <view class='code_view'>{{item.code}}</view>
+          </view>
+        </view>
+        <wxzx-popup popup-show="{{showPopup1}}" popup-style="center" content-alignment="center" z-index='9999'>
+          <view class="popup_content">center center</view> 
+        </wxzx-popup>
+        <wxzx-popup popup-show="{{showPopup2}}" popup-style="scale" content-alignment="center" z-index='9999'>
+          <view class="popup_content">center scale</view> 
+        </wxzx-popup>
+        <wxzx-popup popup-show="{{showPopup3}}" popup-style="top" content-alignment="top" z-index='9999'>
+          <view class="popup_content">top top</view> 
+        </wxzx-popup>
+        <wxzx-popup popup-show="{{showPopup4}}" popup-style="bottom" content-alignment="bottom" z-index='9999'>
+          <view class="popup_content">bottom bottom</view> 
+        </wxzx-popup>
+        <wxzx-popup popup-show="{{showPopup5}}" popup-style="left" content-alignment="left" z-index='9999'>
+          <view class="popup_content">left left</view> 
+        </wxzx-popup>
+        <wxzx-popup popup-show="{{showPopup6}}" popup-style="right" content-alignment="right" mask="true" z-index='9999'>
+          <view class="popup_content">right right</view> 
+          <button class='close_btn' bindtap='close'>关闭</button>
+        </wxzx-popup>
+         <wxzx-popup popup-show="{{showPopup7}}" popup-style="top" content-alignment="top" offset="{{navHeight}}" z-index='9990'>
+          <view class="popup_content">top top</view> 
+        </wxzx-popup>
+      </scroll-view>
+  </view>
+</view>

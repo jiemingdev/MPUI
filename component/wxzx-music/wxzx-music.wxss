@@ -1,0 +1,20 @@
+.music {
+  bottom: 0px;
+  vertical-align: baseline;
+  font-size: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: absolute;
+}
+
+.submusic {
+  display: inline-block;
+  margin-left: 8rpx;
+}
+
+@keyframes living {
+  0% { transform: translateY(100%); }
+  50% { transform: translateY(0%); }
+  100% { transform: translateY(100%); }
+}

@@ -1,0 +1,27 @@
+.page_body {
+  width: 100%;
+  position: absolute;
+  background-color: #efefef;
+}
+
+.sub_view {
+  color: #b0b0b0;
+  font-size: 26rpx;
+  margin: 20rpx;
+}
+
+.block {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #d4237a;
+}
+
+.slider_bg {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+

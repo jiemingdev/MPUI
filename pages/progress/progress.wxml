@@ -1,0 +1,23 @@
+<wxzx-navbar nav-title="Progress" is-tabbar="true"></wxzx-navbar>
+<view class="container">
+  <view class='page_body' style='top: {{navHeight}}px; height: {{bodyHeight}}px'>
+    <scroll-view scroll-y style='height: {{bodyHeight}}px;'>
+        <view class='section_view' wx:for="{{sections}}" wx:key="key" wx:for-index="index">
+          <view class='top_view'>
+            <wxzx-progress percent="{{index == 0 ? 90 : percent}}" width="{{index == 1 ? 600 : width}}" stroke-width="{{index == 2 ? 10 : strokeWidth}}" active-color="{{item.activeColor}}" background-color="{{index == 4 ? '#181818' : backgroundColor}}" radius="{{index == 5 ? 0 : radius}}"></wxzx-progress>
+            <view class='tips_view'>
+              <view class='line_view'></view>
+              <view class='tips'>{{item.tips}}</view>
+            </view>
+            <view class='memo_view'>
+              <view class='memo'>{{item.memo}}</view>
+              <view class='code_btn' bindtap='showCode' data-index="{{index}}">{{item.isShow ? 'Hide Code' : 'Show Code'}}</view>
+            </view>    
+          </view>
+          <view class='bottom_view' bindtap='copyCode' data-index="{{index}}" hidden='{{!item.isShow}}'>
+            <view class='code_view'>{{item.code}}</view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+</view>
